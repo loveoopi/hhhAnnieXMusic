@@ -59,30 +59,6 @@ async def mention_members(client, message, message_pool, stop_cmd):
         active_tags.pop(chat_id, None)
         await client.send_message(chat_id, "✅ ᴛᴀɢɢɪɴɢ sᴇssɪᴏɴ ᴇɴᴅᴇᴅ.")
 
-@app.on_message(filters.command("gntag", prefixes=["/", "!"]))
-async def gntag(client, message):
-    await mention_members(client, message, GN_MESSAGES, "gnstop")
-
-@app.on_message(filters.command("gmtag", prefixes=["/", "!"]))
-async def gmtag(client, message):
-    await mention_members(client, message, GM_MESSAGES, "gmstop")
-
-@app.on_message(filters.command("hitag", prefixes=["/", "!"]))
-async def hitag(client, message):
-    await mention_members(client, message, HI_MESSAGES, "histop")
-
-@app.on_message(filters.command("lifetag", prefixes=["/", "!"]))
-async def lifetag(client, message):
-    await mention_members(client, message, QUOTES, "lifestop")
-
-@app.on_message(filters.command("shayari", prefixes=["/", "!"]))
-async def shayari_tag(client, message):
-    await mention_members(client, message, SHAYARI, "shayarioff")
-
-@app.on_message(filters.command("tagall", prefixes=["/", "!"]))
-async def tag_all(client, message):
-    await mention_members(client, message, TAG_ALL, "tagoff")
-
 @app.on_message(filters.command(["gmstop", "gnstop", "histop", "lifestop", "shayarioff", "tagoff", "tagstop"], prefixes=["/", "!"]))
 async def stop_tagging(client, message):
     chat_id = message.chat.id
