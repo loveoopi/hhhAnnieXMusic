@@ -53,7 +53,7 @@
 
 In addition to music streaming, Annie also features some **Group Management** capabilities including:
 - 🔇 Mute/Kick/Ban etc.
-- 🎛 Admin & member tools (welcome messages, rules, etc.)
+- 🎛 Admin & member tools (rules, etc.)
 
 ---
 ## 🚀 Features
